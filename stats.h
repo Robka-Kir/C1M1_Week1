@@ -93,13 +93,12 @@ int find_maximum(unsigned char data[], unsigned int data_size);
  * @brief find_minimum find minimum value of an array.
  *
  * This function check each n-element of data array 
- * and return lowest value.(Tip: as we already sorted
- * data array maximum value lays in last index of array)
+ * and return lowest value.
  *
  * @param unsigned char data[] Pointer to data array.
  * @param unsigned int SIZE Array size
  *
- * @return data[0]
+ * @return unsigned int max Maximum value of array
  */
 int find_minimum(unsigned char data[], unsigned int data_size);
 
@@ -107,12 +106,12 @@ int find_minimum(unsigned char data[], unsigned int data_size);
  * @brief sort_array function sort given array by Z-A.
  *
  * Given an array of data and a length, sort the array
- * from largest to smallest.(Tip: as we already sorted
- * data array minimum value lays in data[0] - 0 index)
+ * from largest to smallest.
  *
  * @param unsigned char data[] Pointer to data array.
  * @param unsigned int SIZE Array size
  *
+ * @return unsigned int min Minimum value of array
  */
 void sort_array(unsigned char data[], unsigned int data_size);
 

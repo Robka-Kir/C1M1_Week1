@@ -56,7 +56,7 @@ void main() {
   max = find_maximum(data,SIZE);  // Assign max value with function find_maximum() returned value
   min = find_minimum(data,SIZE);  // Assign min value with function find_minimum() returned value
 
-  print_statistics(&max, &min, &mean, &median); // Print table with results
+  print_statistics(&min, &max, &mean, &median); // Print table with results
 }
 
 /* Add other Implementation File Code Here */
@@ -95,18 +95,28 @@ double find_mean(unsigned char data[], unsigned int data_size){
 }
 
 int find_maximum(unsigned char data[], unsigned int data_size){
-  return data[data_size-1];
+  unsigned int i, max = 0;
+  for(i = 0; i < data_size; i++){
+    if(data[i] > max)
+      max = data[i];
+  } 
+  return max;
 }
 
-int find_minimum(unsigned char data[], unsigned int data_size){   
-  return data[0];
+int find_minimum(unsigned char data[], unsigned int data_size){  
+  unsigned int i, min;
+  for(i = 0; i < data_size; i++){
+    if(data[i] < min)
+      min = data[i];
+  } 
+  return min;
 }
 
 void sort_array(unsigned char data[], unsigned int data_size){
-  int i, j, temp;
-  for(i = 0; i < data_size-1; i++){
+  unsigned int i, j, temp;
+  for(i = 0; i < data_size; i++){
     for(j = 0; j < data_size-i-1; j++){
-      if(data[j] > data[j+1])
+      if(data[j] < data[j+1])
         swap(&data[j], &data[j+1]);
     }
   }
