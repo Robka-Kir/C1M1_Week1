@@ -9,13 +9,16 @@
  *
  *****************************************************************************/
 /**
- * @file <Add File Name> 
- * @brief <Add Brief Description Here >
+ * @file stats.c
+ * @brief Program find, sort and print value given in an array
  *
- * <Add Extended Description Here>
+ * This program find in given an array minimum, maximum, mean/average, median 
+ * value and print them to the screen. More over program sort all array element
+ * descent order (Z-A) and print it. After all analysis and sorting is done,
+ * program print that data to screen in nicely formatted table.
  *
- * @author <Add FirsName LastName>
- * @date <Add date >
+ * @author Robert Kirilin
+ * @date 2020-09-27
  *
  */
 
@@ -29,13 +32,14 @@
 
 void main() {
 
-  unsigned char test[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
+  unsigned char data[SIZE] = { 34, 201, 190, 154,   8, 194,   2,   6,
                               114, 88,   45,  76, 123,  87,  25,  23,
                               200, 122, 150, 90,   92,  87, 177, 244,
                               201,   6,  12,  60,   8,   2,   5,  67,
                                 7,  87, 250, 230,  99,   3, 100,  90};
 
   /* Other Variable Declarations Go Here */
+
   /* Statistics and Printing Functions Go Here */
 
 }
